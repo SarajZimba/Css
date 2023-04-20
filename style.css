@@ -1,0 +1,48 @@
+.btn-container{
+    border: 10px solid green;
+    height: 90vh;
+   position:relative;
+}
+
+.button{
+    width: 100%;
+   
+    max-width: 170px;
+    height: 10vh;
+    font-size:2rem;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    color: red;
+    background-color: pink;
+    border: 5px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+   
+
+    /* transition-property:transform ;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; 
+    transition-delay: 0s; */
+    transition: transform 0.4s ease-in 0s, background-color 0.4s, color 0.4s;
+    ;
+    /* transition: all  */
+}
+
+.button:hover{
+    transform: translateY(-10px);
+    background-color: red;
+    color: white;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
