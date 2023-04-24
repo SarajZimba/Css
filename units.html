@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=.demo, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(red, yellow, green);
+        }
+        .demo{
+             /*absolute units 
+                -fixed size
+                    px, pt, cm
+
+                relative units
+                -size depends upon the parent/container
+                % - percentage if the parent
+                vh - viewport height
+                vw - viewport width
+                em - relative to parent
+                    (1em = 16px)
+                    */
+           /* height:50vh; height takes the percentage of the parent size tha is body
+           rem - relative to browser/root 
+           fr - fractional units , used in grids
+           
+           */
+            width: 50vw;
+           
+            background-color: blue;
+            font-size: 2em;
+        }
+        .demo1{
+           
+            height:5pt;
+            width: 5pt;
+            background-color: blue;
+        }
+        .demo2{
+           
+            height:5px;
+            width: 5px;
+            background-color: blue;
+        }
+        .demo3{
+            font-size: 4em;
+            background-color: #0F0F0F;
+
+        }
+        .img{
+            width: 100%;
+            height: 50vh;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        HELLO WORLD
+        <div class="demo3">
+            HELLO WORLD 2em
+        </div>
+    </div>
+    <br>
+    <div class="demo1">
+
+    </div>
+    <br>
+    <div class="demo2">
+
+    </div>
+    <div class="img">
+        <img src="./nature2.jpg" alt="">
+    </div>
+    <svg class="w-full h-full" viewBox="0 0 400 400"><defs><pattern id="bg_pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="20" stroke="#3D348B" stroke-width="6" fill="none"></circle> <circle cx="22" cy="20" r="10" fill="#7678ED"></circle> <circle cx="25" cy="75" r="20" stroke="#7678ED" stroke-width="6" fill="none"></circle> <circle cx="22" cy="78" r="10" fill="#3D348B"></circle>   <circle cx="75" cy="25" r="20" stroke="#7678ED" stroke-width="6" fill="none"></circle> <circle cx="80" cy="26" r="10" fill="#3D348B"></circle> <circle cx="75" cy="75" r="20" stroke="#3D348B" stroke-width="6" fill="none"></circle> <circle cx="80" cy="78" r="10" fill="#7678ED"></circle></pattern></defs><rect x="0" y="0" width="100%" height="100%" fill="#f9f9ff"></rect><rect x="0" y="0" width="100%" height="100%" fill="url(#bg_pattern)"></rect></svg>
+    
+</body>
+</html>
