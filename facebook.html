@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .icon{
+        border-radius: 50%;
+        background-color: blue;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        padding: 9px 0;
+        color: aliceblue;
+
+    }
+
+    .search{
+        height: 30px;
+    }
+
+    button{
+        height: 30px;
+        border: 0;
+        border-radius: 5px;
+        padding: 0 25px;
+
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: purple;
+    }
+    
+    .input{
+        width: 50%;
+        display: flex;
+    }
+
+    .icons{
+        width: 25%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+        .middle{
+            display: flex;
+
+        }
+        .leftsidebar{
+            text-align: center;
+            width: 20%;
+            background-color: aqua;
+        }
+
+        .Maincontent{
+            width: 60%;
+            background-color: burlywood ;
+        }
+        .Maincontent h1{
+            text-align: center;
+        }
+        .rightsidebar{
+            text-align: center;
+            width: 20%;
+            background-color: blueviolet ;
+        }
+
+        img{
+            width: 100%;
+            
+        }
+
+        .links{
+            width: 90%;
+            display: flex;
+            justify-content:space-between;
+            margin: 5px auto;
+
+        }
+
+        .links a{
+            text-decoration: none;
+        }
+
+        footer{
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook</h1>
+        <div class="input">
+               <input type="search">
+                <button>Search</button>
+            </div>
+            <div class="icons">
+                <div class="icon">P</div>
+                <div class="icon">M</div>
+                <div class="icon">N</div>
+            </div>
+
+    </div>
+
+    <div class="middle">
+        <div class="leftsidebar">Leftsidebar</div>
+        <div class="Maincontent">
+            <h1>Heading</h1>
+            <img src="./nature2.jpg" alt="">
+            <div class="links">
+                <a href="#">Like</a>
+                <a href="#">Comment</a>
+                <a href="#">Share</a>
+
+            </div>
+        </div>
+        <div class="rightsidebar">Rightsidebar</div>
+        
+    </div>
+    <footer>
+        <p>&copy;Copyright 2023</p>
+    </footer>
+</body>
+</html>

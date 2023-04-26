@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow-x: hidden;
+        } 
+
+        .container{
+            width: 100%;
+           /* min-height: 100vh;*/
+            background-color: lightblue;
+            display: flex;
+            position: relative;
+        }
+        nav{
+            height: 80px;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lawngreen;
+        }
+        .navitems{
+            display: flex;
+           
+            justify-content: space-between ;
+            
+        }
+
+        .navitems li{
+            
+            margin: 0 120px;
+            list-style: none;
+        }
+
+        .navitems li a{
+            text-decoration:none;
+        }
+        .navitems li:hover a{
+            color: black;
+
+        }
+        .middle{
+            display: flex;
+        }
+        .leftsidebar{
+            width: 25%;
+            height: 650px;
+            background-color: blueviolet;
+            
+        }
+
+        .leftsidebar h1:hover{
+            transform: translateY(5px);
+            transition: all ease-in 0.2s;
+        }
+
+        .leftsidebar:hover{
+            color: lightsalmon;
+           
+        }
+
+        .maintop{
+            width: 75%;
+            height: 650px;
+            background-color: blue;
+            
+        }
+        .maintop h1{
+            text-align: center;
+        }
+
+        .maintop h1:hover{
+            color:chartreuse
+        }
+        .inner{
+            display: flex;
+        }
+        .bottomleft{
+            width: 50%;
+            margin-top: 400px;
+            height: 213px;
+            background-color: red;
+            display:flex;
+            /*
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;*/
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        
+        .bottomright{
+            width: 50%;
+            margin-top: 400px;
+            height: 213px;
+            background-color: yellow;
+            display:flex;
+            
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            
+            /*justify-content: flex-end;
+            align-items: flex-end; */
+        }
+
+        footer{
+            height: 8vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <nav>
+            <ul class="navitems">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="middle">
+        <div class="leftsidebar">
+            <h1 title="Hello I am left sidebar">LeftSidebar</h1>
+        </div>
+        <div class="maintop">
+            <h1 title="Hi I am main top">MainTop</h1>
+            <div class="inner">
+            <div class="bottomleft">
+                <h1 title="I am bottomleft">Bottomleft</h1>
+            </div>
+            <div class="bottomright">
+                <h1 title="I am bottomright">Bottomright</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer>&copy;All Rights Reserved</footer>
+
+    <div class="demo">
+
+    </div>
+</body>
+</html>

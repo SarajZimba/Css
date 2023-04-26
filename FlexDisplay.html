@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item{
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            /* margin: 10px; */
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .container{
+            height: 1200px; 
+            display: flex;
+            justify-content:space-evenly;
+            flex-wrap: wrap; /* used to have the width of 300px*/
+            /* flex-direction: column; */ 
+            align-content: flex-end;
+            align-items: baseline;
+            justify-items: center;
+        }
+
+        p{
+            width: 250px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias hic velit natus eum, voluptas temporibus est quaerat quos laborum vero, vel quo assumenda cupiditate tempora officia similique! Quisquam, aliquam quo.</p>
+        <li>list item</li>
+        <span>Lorem ipsum dolor sit.</span>
+        <button>click me</button>
+        <input type="text" placeholder="Enter your msg here">
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>
