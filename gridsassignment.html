@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 3px;
+
+        }
+        .one{
+            grid-column: 1/3;
+            background-color: brown;
+        }
+        .two{
+            grid-column: 3/6;
+            background-color: pink;
+            grid-row: 1/3;
+        }
+        .grid{
+            grid-column:6/10;
+            grid-row: 1/5;
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            
+        }
+        .four{
+            grid-column:10/12;
+            background-color: yellow;
+        }
+        .five{
+            grid-column:1/3;
+            background: greenyellow;
+        }
+
+        .six{
+            grid-column: 10/12;
+            background-color: blue;
+        }
+        .seven{
+            grid-column: 1/3;
+            background-color: goldenrod;
+        }
+        .eight{
+            grid-column: 3/4;
+            grid-row: 3/4;
+            background-color: green;
+        }
+        .nine{
+            grid-column: 4/6;
+            grid-row: 3/4;
+            background-color: aqua;
+        }
+        .ten{
+            grid-column: 10/12;
+            background-color: rgb(100, 212, 186);
+        }
+        .eleven{
+            grid-column: 1/6;
+            background-color: purple;
+        }
+        .twelve{
+            grid-column: 10/12;
+            background-color: red;
+        }
+
+      
+        .items{
+            height: 100vh;
+        }
+        .box2{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxs{
+            padding-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main items">
+            <div class="one boxs">1</div>
+            <div class="two boxs">2</div>
+            <div class="grid boxs box2">CSS Grid Layout</div>
+            <div class="four boxs">4</div>
+            <div class="five boxs">5</div>
+            <div class="six boxs">6</div>
+            <div class="seven boxs">7</div>
+            <div class="eight  boxs">8</div>
+            <div class="nine boxs">9</div>
+            <div class="ten boxs">10</div>
+            <div class="eleven  boxs">11</div>
+            <div class="twelve boxs">12</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
