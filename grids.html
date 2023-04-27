@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto 300px 25%;/*1fr 2fr 1fr 200px*/
+            grid-template-rows: 10vh 40vh 40vh 10vh;
+        }
+
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row: 1;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            align-items: center;
+            text-align: center;
+        }
+        li{
+            list-style: none;
+        }
+        .item2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: rgb(145, 255, 0);
+        }
+        .item3{
+            grid-column: 2/4;
+            background-color: rgb(13, 0, 255);
+        }
+
+        .item4{
+            grid-column:2/3;
+            background-color: brown;
+        }
+        .item5{
+            grid-column:3/4;
+            background-color: gray;
+        }
+
+        .item6{
+            grid-column: 1/4;
+            background-color: chocolate;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Blogs</li>
+                <li>Contact</li>
+            
+        </div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">Footer</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">7</div>
+        <div class="item">7</div>
+        <div class="item">7</div>
+        <div class="item">7</div>
+        <div class="item">7</div>
+     
+    </div>
+</body>
+</html>
