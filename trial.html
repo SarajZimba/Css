@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignmentflex</title>
+    <style>
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: blueviolet;
+}
+.middle{
+
+
+display:flex;
+
+
+
+}
+.leftsider{
+    width: 25%;
+            height: 650px;
+    background-color: red;
+
+}
+.maintop{
+    width: 75%;
+    height: 650px;
+    background-color: brown;
+    text-align: center;
+    
+}
+.bottom{
+
+    display: flex;
+  
+}
+.bottomleft{
+    width: 50%;
+    margin-top: 400px;
+    height: 213px;
+    background-color: greenyellow;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+.bottomright{
+    width: 50%;
+    margin-top: 400px;
+    height: 213px;
+    background-color: yellow;
+    display:flex;
+    /*
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    */
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Home</p>
+        <p>About</p>
+        <p>Gallery</p>
+        <p>Blogs</p>
+        <p>Contact</p>
+    </div>
+    <div class="middle">
+        <div class="leftsider"> left sider</div>
+    
+<div class="maintop">
+    <h1>
+        main top
+    </h1>
+
+<div class="bottom">
+<div class="bottomleft">
+    bottom left
+</div>
+<div class="bottomright">
+    bottom right
+</div>
+
+   
+        </div>
+    <div>
+</div>
+<footer> &copy;Footer</footer>
+</body>
+</html>

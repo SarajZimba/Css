@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cointainer{
+            position: relative;
+            height: 40%;
+            width: 75%;
+            margin: auto;
+        }
+
+
+        img{
+            height: 100%;
+            width: 100%;
+           
+            
+        }
+        .button1{
+            position: absolute;
+            top: 45%;
+            left: 0;
+        }
+         .button2{
+            position: absolute;
+            top: 45%;
+            right: 0;
+         }
+
+      
+    </style>
+</head>
+<body>
+
+    <div class="cointainer">
+        <img src="./bclady.jpg" alt="" id="slider">
+        <button class="button1" onclick = "prev()"> << </button>
+        <button class="button2" onclick="next()"> >></button>
+       
+
+        
+    </div>
+
+
+
+    <script>
+        let img_array = ["bclady1.jpg", "bclady.jpg", "bcmodel2.jpg", "backgroundmodel1.jpg"]
+        let index=0;
+        document.getElementById("slider").src = img_array[index]
+
+        const next = () =>{
+            index++;
+
+            if(index == img_array.length){
+                index = 0;
+            }
+            document.getElementById("slider").src = img_array[index]
+        }
+
+        const prev = () => {
+            index--;
+            if(index == -1){
+                index = img_array.length -1;
+            }
+        
+
+            document.getElementById("slider").src = img_array[index]
+            
+        }
+
+        setInterval(prev, [3000])
+
+        let dice_img_array = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"]
+        let i= 0;
+
+
+        let dice = () =>{
+            i = Math.floor(Math.random() * 6)
+            document.getElementById('dice').src = dice_img_array[i]
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <style>
+        .header{
+            display: grid;
+            grid-template-columns: 10%  20% 40% 10% 10% 10%  ;
+        }
+
+        .body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .video{
+           grid-row:1/5;
+           grid-column: 1/4;
+            background-color: antiquewhite;
+        }
+        .description{
+            grid-row:5/8;
+            grid-column: 1/4;
+            background-color: blue;
+        }
+        .rows{
+            <!-- display: grid;
+            grid-template-rows: 100% 100% 100% 100% 100% 100% 100%; -->
+        }
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: blue;
+        }
+        .three{
+            background-color: yellow;
+        }
+        .four{
+            background-color: green;
+        }
+        .five{
+            background-color: pink;
+        }
+        .six{
+            background-color: hotpink;
+        }
+        .seven{
+            background-color: orangered;
+        }
+        .eight{
+            background-color: lawngreen;
+        }
+
+        footer{
+            text-align: center;
+            background-color: aqua;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <div class="logo">I</div>
+        <div class="youtube">Youtube</div>
+        <div class="search_button">
+            <input type="search">
+            <button>search</button>
+        </div>
+        <div class="u">U</div>
+        <div class="n">N</div>
+        <div class="p">P</div>
+    </div>
+
+    <div class="body">
+        <div class="video">Video</div>
+        <div class="description">Description</div>
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+        <div class="five">Five</div>
+        <div class="six">Six</div>
+        <div class="seven">Seven</div>
+
+        
+    </div>
+</div>
+<footer>Footer</footer>
+    
+</body>
+</html>

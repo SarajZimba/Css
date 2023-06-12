@@ -1,0 +1,8 @@
+<h3>My Information</h3>
+<p>Name : Saraj Gimba</p>
+<p>Address : Checkpost, Kathmandu</p>
+<p>Faculty : B.Sc. CSIT</p>
+<p>Roll Number : 23191</p>
+<p>Section : B</p>
+
+<hr>

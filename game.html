@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <div class="p1">
+        <div class="container" id="contaner1"></div>
+        <button class="b1" onclick ="play1()">PLay</button>
+    </div>
+
+    <div class="p2">
+        <div class="container" id="container2"></div>
+        <button class="b2" onclick ="play2()">Play</button>
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        //Rock Paper Scissors
+        let choices = ["Rock", "Paper", "Scissor"]
+
+
+        let play1 = () =>{
+            i = Math.floor(Math.random() * 3)
+        
+            choice1 = document.getElementById("contaner1").innerHTML = choices[i]
+
+            if((choice1=="Rock" && choice2 == "Paper") || (choice1=="Paper" && choice2 == "Scissor") || (choice1=="Scissor" && choice2 == "Rock")){
+                document.getElementById("result").innerHTML = "Player2 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Scissor") || (choice1=="Paper" && choice2 == "Rock") || (choice1=="Scissor" && choice2 == "Paper")){
+                document.getElementById("result").innerHTML = "Player1 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Rock") || (choice1=="Paper" && choice2 == "Paper") || (choice1=="Scissor" && choice2 == "Scissor")){
+                document.getElementById("result").innerHTML = "Its a Draw"
+            }
+        }
+
+        let play2 = () =>{
+            j = Math.floor(Math.random() * 3)
+
+            choice2 = document.getElementById("container2").innerHTML = choices[j] 
+
+            if((choice1=="Rock" && choice2 == "Paper") || (choice1=="Paper" && choice2 == "Scissor") || (choice1=="Scissor" && choice2 == "Rock")){
+                document.getElementById("result").innerHTML = "Player2 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Scissor") || (choice1=="Paper" && choice2 == "Rock") || (choice1=="Scissor" && choice2 == "Paper")){
+                document.getElementById("result").innerHTML = "Player1 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Rock") || (choice1=="Paper" && choice2 == "Paper") || (choice1=="Scissor" && choice2 == "Scissor")){
+                document.getElementById("result").innerHTML = "Its a Draw"
+            }
+        }
+
+
+        // j = Math.floor(Math.random * 3)
+        
+    </script>
+</body>
+</html>

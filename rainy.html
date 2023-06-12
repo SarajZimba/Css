@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .loading{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px red inset ;
+            animation: load 1s linear infinite;
+            
+        }
+
+        .loading:before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            box-shadow: 0 0 5px skyblue;
+        }
+
+        @keyframes load{
+            0%{
+                transform: rotate(0deg);
+                box-shadow: 1px 1px 2px red  ;
+                
+            }
+            50%{
+                transform: rotate(180deg);
+                box-shadow: 1px 1px 2px blue  ;
+               
+            }
+            100%{
+                transform: rotate(360deg);
+                box-shadow: 1px 1px 2px yellow  ;
+                
+            }
+        }
+
+
+            span{
+                position: absolute;
+                color: white;
+                animation: text 3s ease-in-out infinite;
+            }
+
+            @keyframes text{
+                50%{
+                    color: black;
+                }
+                 <!-- 100%{
+                    color: red;
+                } -->
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="loading">
+       
+    </div>
+    <span >Loading..</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center{
+            position: relative;
+            width: 60%;
+            height: 80%;
+            
+        }
+
+        .imagecontainer{
+            overflow: hidden;
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            
+            
+        }
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #one{
+            width: 100%;
+        }
+
+        .text{
+            z-index: 999;
+            position: absolute;
+            bottom: 20%;
+            left: -10%;
+            width: 400px;
+            height: 100px;
+            overflow: hidden;
+            
+            
+        }
+
+        .text h1{
+            top: 100px;
+            position: absolute;
+            font-size: 3vw;
+            color: pink;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="text">
+                <h1>Mountains</h1>
+                <h1>Rivers</h1>
+                <h1>Players</h1>
+            </div>
+            <div class="imagecontainer">
+                <img id="one" src="https://images.unsplash.com/photo-1683217617813-9c77d57028f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">   
+            </div>
+            <div class="imagecontainer">
+                <img id="two" src="https://plus.unsplash.com/premium_photo-1682778015002-fa5b916a34db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="">
+            </div>
+            <div class="imagecontainer">
+               <img id="three" src="https://images.unsplash.com/photo-1682709846996-f3c895743d37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="">
+            </div>
+          
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+         /*gsap.to("#one", { ]
+            width: "100%",
+            ease: Expo.easeInOut,
+            duration: 2
+
+        })*/
+
+    
+            gsap.to(".imagecontainer", {
+                ease:Expo.easeInOut,
+                width:"100%",
+                stagger: 2,
+                repeat:-1,
+              
+            })
+
+            gsap.to(".text h1",{
+               
+                ease: Expo.easeInOut,
+                stagger:2,
+                top:0,
+                repeat:-1,
+              
+            })
+            gsap.to(".text h1",{
+                delay:2,
+                ease: Expo.easeInOut,
+                stagger:2,
+                top:"-100%",
+                repeat:-1
+            })
+        
+    </script>
+</body>
+</html>

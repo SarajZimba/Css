@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*combinators
+            1.Universal Selector: *
+            2.Grouping combinator: (,): it is used to apply same css to multipple selectors
+
+        */
+
+.demo1, .demo2, .demo3, .demo4, p, #list{
+    <!-- height: 100px; -->
+    width: 100px;
+    background-color: blue;
+    margin: 5px;
+}
+
+    /*Descendant Combinator -
+        to apply css to the descending elements we use parent class foloowed by a space followed by descending elements
+    */
+        
+    .demo1 p{
+        color: yellow;
+    }
+
+    .demo1 .demo2 p{
+        text-align: right;
+    }
+
+    /* child selector/combinator - immediate descendants
+    to apply css to child elements we use (>) symbol between the parent and child elements while applying css
+
+    */
+
+    .demo1 > p{
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /*General Siblings
+        to apply css to genral siblings we use (~) tilde symbol
+        between the siblings
+    */
+
+    .demo1 ~ p{
+        font-style: italic;
+    }
+    .demo2 ~ p{
+        font-style: italic;
+        color: gray;
+    }
+
+    /*ADJACENT SIBLING 
+    
+        (+) iT IS USED TO APPLY CSS TO ADJACENT SIBLING
+    */
+
+    .demo1 + p{
+        font-size: 32px;
+    }
+
+    /* Attribute selector */
+    input[type=text]{
+        background-color: aqua;
+    }
+    p[name="para"]{
+        background-color: green;
+    }
+
+    /*
+    Pseudo classes 
+
+    
+    */
+    p:hover{
+      
+            background-color: red;
+            
+    }
+
+    button:hover{
+        background-color: aqua ;
+    }
+    button:active{
+        background-color: purple;
+    }
+
+    a:link{
+        color: green;
+    }
+    a:visited{
+        color: gray;
+    }
+    a:hover{
+        color: rgb(128, 102, 0);
+    }
+    a:active{
+        color: rgb(128, 0, 0);
+    }
+
+    /* frist chhild */
+
+    li:first-child{
+        background-color: yellow;
+    }
+
+    p:first-child{
+        background-color: red;
+    }
+
+    /*last child*/
+    li:last-child{
+        background-color: gray;
+    }
+
+    li:nth-child(even){
+        text-align:  left;
+    }
+    li:nth-child(odd){
+        text-align:  odd;
+    }
+
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        height: 50px;
+        width: 50px;
+        border: 3px solid;
+        
+    }
+
+    tr:nth-child(odd) td:nth-child(even){
+        background-color: black;
+    }
+
+    tr:nth-child(even) td:nth-child(odd){
+        background-color: black;
+    }
+
+
+    /*Pseudo elements*/
+    /*before after*/
+    h1::before{
+        content: "space";
+        /* height: 20px; */
+        width: 20px;
+        background: blue;
+    }
+    h1:after{
+        content: "backspace";
+        /* height: 20px; */
+        width: 20px;
+        background: blue;
+    }
+
+    p::first-line{
+        font-size: 100px;
+    }
+
+    p::first-letter{
+        font-size: 50px;
+    }
+
+    p::selection{
+        background-color: orange;
+    }
+
+    li::marker{
+        color: peru;
+        font-size: 30px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Chess board</h1>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- <div class="demo1">1</div>
+    <div class="demo2">2</div>
+    <div class="demo3">3</div>
+    <div class="demo4">4</div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div id="list">List Item</div> -->
+    <a href="">Click here</a>
+
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+
+    <button>Click me</button>
+
+    <input type="text">
+    <input type="email">
+
+    <p name="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus?</p>
+    <div class="demo1">
+        <p>This is descendant of demo1, child of demo1</p>
+        <div class="demo2">
+
+            <p>This is descendant of demo1, demo2, not child of demo1</p>
+        </div>
+        <p name="para">This is also an descendant, child of demo1   </p>
+        <p>This is also an descendant, child of demo1   </p>
+        <p>This is also an descendant, child of demo1   </p>
+    </div>
+    <p>Not a descendant of demo1</p>
+    <div class="demo2">
+    <p>Not a descendant of demo1</p>
+    <p>Not a descendant of demo1</p>
+    <p>Not a descendant of demo1</p>
+</div>
+</body>
+</html>
