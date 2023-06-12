@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <div id="play-game">
+        <button id="button" onclick="play()">Play game</button>
+    </div>
+
+    <div id="p1">
+
+    </div>
+
+    <div id="p2">
+
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        choices = ["Rock", "Paper", "Scissor"]
+        let play = () =>{
+
+            i = Math.floor(Math.random()*3)
+            document.getElementById("p1").innerHTML = "Player 1 chose " + choices[i]
+
+            choice1 = choices[i]
+
+            j = Math.floor(Math.random()*3)
+            document.getElementById("p2").innerHTML = "Player 2 chose " + choices[j]
+            choice2 = choices[j]
+
+            if((choice1=="Rock" && choice2 == "Paper") || (choice1=="Paper" && choice2 == "Scissor") || (choice1=="Scissor" && choice2 == "Rock")){
+                document.getElementById("result").innerHTML = "Player2 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Scissor") || (choice1=="Paper" && choice2 == "Rock") || (choice1=="Scissor" && choice2 == "Paper")){
+                document.getElementById("result").innerHTML = "Player1 wins"
+            }
+            if((choice1=="Rock" && choice2 == "Rock") || (choice1=="Paper" && choice2 == "Paper") || (choice1=="Scissor" && choice2 == "Scissor")){
+                document.getElementById("result").innerHTML = "Its a Draw"
+            }
+
+
+        }
+    </script>
+</body>
+</html>
