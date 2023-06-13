@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let equipments = ["football", "basketball", "baaseball"]
+
+        let add = (item) =>{
+            equipments.push(item)
+        }
+
+        let display = () =>{
+            equipments.map((item) =>{
+                document.write(`<li>${item}</li>`)
+            })
+        }
+
+        let display_async = () =>{
+            setTimeout(display, [2000])
+        }
+        
+        let add_async = (item, cb )=>{
+            setTimeout(()=>{
+                add(item)
+                cb();
+            }, [3000])
+        }
+
+        //add_async("tennisball", display)
+        
+
+        let test = async () =>{
+            await add_async("Cricketball", display_async)
+            
+
+        }
+
+        test()
+        
+
+        const add_async2 = (item) =>{
+            return new Promise((resolve, reject)=>{
+                let error =false
+
+                setTimeout(()=>{
+                    if(!error){
+                        add(item)
+                        resolve()
+                    }
+                    else{
+                        reject("Something went erong")
+                    }
+                }, [1000])
+                
+            })
+        }
+
+        const demo_function = async() =>{
+            await add_async2("Rugbyball")
+            //from demo
+            document.write("from demo")
+            display_async()
+        }
+        demo_function()
+
+        let best = async () =>{
+            await add_async("ball", display_async)
+            
+
+        }
+        best()
+
+
+    </script>
+</body>
+</html>
