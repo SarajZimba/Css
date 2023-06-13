@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async functions</title>
+</head>
+<body>
+    <!--
+        
+        synchronous function - works in sync 
+
+        asynchronous function - works independently(does not affect entire program if an error occurs )
+        
+        Some examples of asynchronous functions are:
+        e.g: fetch, working with file, 
+        
+        1.Callback functions
+        2.Promise : .then
+        3.Async/Await
+
+    -->
+
+    <script src="./async_function.js"></script>
+    <script>
+        //callback function
+       // add_async("mango", display_async)
+       // display_async()
+        
+       // display_async()
+
+       //promise (.then) example
+
+      /* add_async2("mango")
+       .then(display_async)
+
+       .catch((error)=>{
+        document.write(error)
+       })*/
+
+       //async function demo_function(){
+        const demo_function = async () =>{
+            try{
+                await add_async2("mango")
+                display_async()
+            }
+            catch(error){
+                document.write(error)
+            }
+    }
+        demo_function()
+    </script>
+
+
+</body>
+</html>
