@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storgae</title>
+</head>
+<body>
+    <script>
+
+        //Javascript Object Notation
+
+        //localStorage: setItem(key, value)
+
+        /*localStorage.setItem('name', 'ram')
+        
+
+        let value = "kathmandu"
+        sessionStorage.setItem(key, value)
+        */
+        /*
+        localStorage.setItem("address", "kathmandu")
+        let key = "address"
+        let name = localStorage.getItem("name")
+        let address = localStorage.getItem(key)
+
+        document.write("Name: " + name)
+        document.write("<br>Address: " + address)
+
+        //localStorage.setItem("phone", 987653526)
+
+        let phone = localStorage.getItem("phone")
+        document.write("<br>Phone: " + phone)
+
+        //let fruits = ["apple", "orange", "banana"]
+        //localStorage.setItem("fruits", JSON.stringify(fruits))
+
+        //JSON.stringify(object) : converts the object to the string
+
+        //JSON.parse(JSON String) : converts the JSON string into object
+
+        let fruits = JSON.parse(localStorage.getItem("fruits"))
+        document.write("<br>" + typeof(fruits)) 
+        document.write("<br>" + fruits[0])
+
+        fruits.map(fruit=>document.write(`<li></li>${fruit}`))
+
+        //localStorage.removeItem(key) - removes the data in key from localStorage
+        localStorage.removeItem("name")
+
+        //localStorage.clear() - clears the localStorage/remove all the data from localStorage
+
+        localStorage.clear()
+        */
+
+        /* let person = {
+            name:"ram",
+            address:"kathmandu",
+            phone: 982736278
+        } */
+
+        //document.write("<br>Name:" + person.name)
+        //document.write("<br>Address:" + person.address)
+        //document.write("<br>Phone:" + person.phone)
+
+       /* for (var key in person){
+            document.write("<h2>" + person[key] + "</h2>")
+        }*/
+
+        /*for (var key of person){
+            document.write("<h2>" + key + "</h2>")
+        }*/
+        /*let person_json = {
+            "name": "ram"
+        }*/
+
+        /*let person2 = {...person, name :""}
+        for(var key in person2){
+            document.write("<h4>" + person2[key] + "</h4>")
+        }*/
+
+        //localStorage.setItem("person", JSON.stringify(person))
+
+        let person1 = JSON.parse(localStorage.getItem("person"))
+        //let person1 = localStorage.getItem("person")
+        document.write("<br>" + person1.name)
+        document.write("<br>" + person1.address)
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
